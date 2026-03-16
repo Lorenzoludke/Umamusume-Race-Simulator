@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/aposta.css">
+<title>Aposte agora</title>
+</head>
+
+<body>
+<div id="saldoButton">
+    <button class="saldo" onclick="saldoConfig()">Saldo: <span id="saldo"></span></button>
+</div>
+
+<div>
+    <button class="leaveButton" onclick="goBackIndex()">Voltar</button>
+</div>
+
+<div class="betTitle">
+    <h1>Aposta</h1>
+</div>
+
+<div class="podio">
+    <div class="lugar primeiro">
+        <span class="pos">1º</span>
+        <span class="nome">Rice Shower</span>
+        <span class="remove">✖</span>
+    </div>
+
+    <div class="lugar segundo">
+        <span class="pos">2º</span>
+        <span class="nome">Agnes Tachyon</span>
+        <span class="remove">✖</span>
+    </div>
+
+    <div class="lugar terceiro">
+        <span class="pos">3º</span>
+        <span class="nome">Manhattan Cafe</span>
+        <span class="remove">✖</span>
+    </div>
+</div>
+
+<div class="subtitle">
+<h2>Musumes:</h2>
+</div>
+
+<div class="musumes">
+<p class="musume" data-musume="Rice Shower">
+    <img src="/img/rice_shower.jpg" class="avatar">
+    1️⃣ Rice Shower — Odds: <span id="odd1"></span>
+</p>
+
+<p class="musume" data-musume="Agnes Tachyon">
+    <img src="/img/agnes_tachyon.jpg" class="avatar">
+    2️⃣ Agnes Tachyon — Odds: <span id="odd2"></span>
+</p>
+
+<p class="musume" data-musume="Manhattan Cafe">
+    <img src="/img/manhattan_cafe.jpg" class="avatar">
+    3️⃣ Manhattan Cafe — Odds: <span id="odd3"></span>
+</p>
+
+<p class="musume" data-musume="Mejiro McQueen">
+    <img src="/img/mejiro_mcqueen.jpg" class="avatar">
+    4️⃣ Mejiro McQueen — Odds: <span id="odd4"></span>
+</p>
+
+<p class="musume" data-musume="Vodka">
+    <img src="/img/vodka.jpg" class="avatar">
+    5️⃣ Vodka — Odds: <span id="odd5"></span>
+</p>
+
+<p class="musume" data-musume="Tokai Teio">
+    <img src="/img/tokai_teio.jpg" class="avatar">
+    6️⃣ Tokai Teio — Odds: <span id="odd6"></span>
+</p>
+
+<p class="musume" data-musume="Special Week">
+    <img src="/img/special_week.jpg" class="avatar">
+    7️⃣ Special Week — Odds: <span id="odd7"></span>
+</p>
+
+<p class="musume" data-musume="Silence Suzuka">
+    <img src="/img/silence_suzuka.jpg" class="avatar">
+    8️⃣ Silence Suzuka — Odds: <span id="odd8"></span>
+</p>
+
+<p class="musume" data-musume="Oguri Cap">
+    <img src="/img/oguri_cap.jpg" class="avatar">
+    9️⃣ Oguri Cap — Odds: <span id="odd9"></span>
+</p>
+
+<p class="musume" data-musume="Gold Ship">
+    <img src="/img/gold_ship.jpg" class="avatar">
+    1️⃣0️⃣ Gold Ship — Odds: <span id="odd10"></span>
+</p>
+
+<p class="musume" data-musume="Daiwa Scarlet">
+    <img src="/img/daiwa_scarlet.jpg" class="avatar">
+    1️⃣1️⃣ Daiwa Scarlet — Odds: <span id="odd11"></span>
+</p>
+
+<p class="musume" data-musume="Narita Brian">
+    <img src="/img/narita_brian.jpg" class="avatar">
+    1️⃣2️⃣ Narita Brian — Odds: <span id="odd12"></span>
+</p>
+</div>
+<div>
+    <button class="ApostarButton" onclick="Apostar()">Finalizar Aposta</button>
+</div>
+
+    <script src="/js/geral.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/aposta.js"></script>
+</body>
+</html>

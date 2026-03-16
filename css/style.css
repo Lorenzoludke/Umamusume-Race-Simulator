@@ -1,0 +1,81 @@
+body{
+    background-color: gray;
+    text-align: center;
+    color: black;
+}
+
+.title{
+    font-size: 24px;
+}
+
+.saldo{
+    font-size: 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    background-color: rgb(120,120,120);
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.saldo:hover{
+    background-color: rgb(150,150,150);
+    transform: scale(1.02); 
+}
+
+.subtitle{
+    font-size: 20px;
+}
+
+.musumes{
+    width: 400px;
+    margin: auto;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.musumes p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: rgb(120,120,120);
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.musumes p:hover{
+    background-color: rgb(150,150,150);
+    transform: scale(1.02);
+}
+
+.ApostarButton{
+    background-color: rgb(86, 93, 95);
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ApostarButton:hover{
+    background-color: rgb(150,150,150);
+    transform: scale(1.02);
+    transition: 0.2s;
+}
