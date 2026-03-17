@@ -72,10 +72,10 @@ body{
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .ApostarButton:hover{
     background-color: rgb(150,150,150);
     transform: scale(1.02);
-    transition: 0.2s;
 }

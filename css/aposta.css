@@ -5,12 +5,12 @@
     width: 200px;
     margin: 20px auto;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .betTitle:hover{
     background-color: rgb(150,150,150);
     transform: scale(1.02);
-    transition: 0.2s;
 }
 
 .leaveButton{
@@ -21,6 +21,7 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: 0.2s;
     position: fixed;
     top: 20px;
     left: 20px;
@@ -29,7 +30,6 @@
 .leaveButton:hover{
     background-color: rgb(150,150,150);
     transform: scale(1.02);
-    transition: 0.2s;
 }
 
 .podio{
