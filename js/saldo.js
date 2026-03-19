@@ -1,7 +1,11 @@
 document.getElementById("saldo").textContent = saldo
 
-function goBackIndex() {
-    window.history.back();
+function exit() {
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = "../index.html"
+    }
 }
 
 function addCoins() {
