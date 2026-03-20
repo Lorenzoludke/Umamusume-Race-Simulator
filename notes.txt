@@ -23,3 +23,6 @@ arrumar o backButttttton, podio com o valor total de coins, finalizar aposta but
 fera dms botar um start game intro no começo, tipo, seria fera, e botar as fotos das umamusumes 
 
 firstPlace.textContent = musumeName;
+
+
+npm node nvm

@@ -4,6 +4,7 @@
 
 let saldo = Number(localStorage.getItem("saldo")) || 100;
 let podio = JSON.parse(localStorage.getItem("podio")) || [null, null, null];
+let price = Number(localStorage.getItem("price")) || 0;
 
 // =====================
 // SALDO
@@ -44,6 +45,25 @@ function escolherMusume(nome, posicao) {
 function limparPodio() {
     podio = [null, null, null];
     salvarPodio();
+}
+
+// =====================
+// PRICE
+// =====================
+
+function addPrice(Qt) {
+    price += Qt;
+    localStorage.setItem("price", price);
+}
+
+function removePrice(Qt) {
+    price -= Qt;
+    localStorage.setItem("price", price);
+}
+
+function resetPrice() {
+    price = 0;
+    localStorage.setItem("price", price);
 }
 
 // =====================
