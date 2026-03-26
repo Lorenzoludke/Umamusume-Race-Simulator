@@ -4,7 +4,21 @@ const positions = document.querySelectorAll(".remove");
 const multipliers = document.querySelectorAll(".times");
 const priceQT = document.querySelector("#priceQt");
 
-let multiplier = 1;
+// Gerar valores aleatórios para as odds dos cavalos ------------------
+
+for (let i = 0; i < 12; i++) {
+    let v = Math.random();
+    valores.push(v);
+    total += v;
+}
+
+for (let i = 0; i < 12; i++) {
+
+    let chance = ((valores[i] / total) * 100).toFixed(1);
+
+    document.getElementById("odd"+(i+1)).textContent = chance + "%";
+
+}
 
 //========================
 //Adiciona no pódio
@@ -80,7 +94,7 @@ multipliers.forEach(el => {
             multiplier = 1;
             el.classList.remove("active");  
         } else {
-             multiplier = multiplierTimes;
+             addMultiplier(multiplierTimes);
 
              multipliers.forEach(m => m.classList.remove("active"));
 
@@ -101,8 +115,14 @@ function finishBet() {
     return;
     }
 
+    if (price * multiplier > saldo) {
+        showToast("Saldo insuficiente");
+        return;
+    }
+
     window.location.href = "race.html";
 }
 
 limparPodio();
 resetPrice();
+resetMultiplier();
