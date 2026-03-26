@@ -5,6 +5,7 @@
 let saldo = Number(localStorage.getItem("saldo")) || 100;
 let podio = JSON.parse(localStorage.getItem("podio")) || [null, null, null];
 let price = Number(localStorage.getItem("price")) || 0;
+let multiplier = Number(localStorage.getItem("multiplier")) || 1;
 
 // =====================
 // SALDO
@@ -64,6 +65,25 @@ function removePrice(Qt) {
 function resetPrice() {
     price = 0;
     localStorage.setItem("price", price);
+}
+
+function setPrice(Qt) {
+    price = Qt;
+    localStorage.setItem("price", price);
+}
+
+// =====================
+// MULTIPLICADOR
+// =====================
+
+function addMultiplier(Qt) {
+    multiplier = Qt;
+    localStorage.setItem("multiplier", multiplier);
+}
+
+function resetMultiplier() {
+    multiplier = 1;
+    localStorage.setItem("multiplier", multiplier);
 }
 
 // =====================
