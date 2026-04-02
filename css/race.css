@@ -1,0 +1,22 @@
+.posicao {
+    width: 35px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.nome {
+    flex: 1;
+}
+
+.musumes {
+    position: relative;
+    height: 1000px;
+}
+
+.musumes p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.4s ease, scale 0.2s;
+}

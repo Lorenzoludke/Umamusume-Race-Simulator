@@ -49,7 +49,7 @@ body{
     border-radius: 10px;
     margin: 8px 0;
     cursor: pointer;
-    transition: 0.2s;
+    transition: transform 0.4s ease, scale 0.2s;
 }
 
 .avatar{
@@ -61,7 +61,7 @@ body{
 
 .musumes p:hover{
     background-color: rgb(150,150,150);
-    transform: scale(1.02);
+    scale: 1.02;
 }
 
 .ApostarButton{

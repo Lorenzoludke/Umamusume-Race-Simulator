@@ -6,19 +6,30 @@ const priceQT = document.querySelector("#priceQt");
 
 // Gerar valores aleatórios para as odds dos cavalos ------------------
 
-for (let i = 0; i < 12; i++) {
-    let v = Math.random();
-    valores.push(v);
-    total += v;
-}
+document.addEventListener("DOMContentLoaded", () => {
 
-for (let i = 0; i < 12; i++) {
+    let valores = [];
+    let total = 0;
+    let oddsObj = {};
 
-    let chance = ((valores[i] / total) * 100).toFixed(1);
+    for (let i = 0; i < 12; i++) {
+        let v = Math.random();
+        valores.push(v);
+        total += v;
+    }
 
-    document.getElementById("odd"+(i+1)).textContent = chance + "%";
+    for (let i = 0; i < 12; i++) {
+        let chance = (valores[i] / total) * 100;
+        let nome = document.querySelectorAll(".musume")[i].dataset.musume;
 
-}
+        oddsObj[nome] = chance;
+
+        document.getElementById("odd"+(i+1)).textContent = chance.toFixed(1) + "%";
+    }
+
+    localStorage.setItem("odds", JSON.stringify(oddsObj));
+
+});
 
 //========================
 //Adiciona no pódio
