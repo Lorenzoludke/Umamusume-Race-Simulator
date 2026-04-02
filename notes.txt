@@ -18,8 +18,6 @@ ultimos 20 seg, diminui o time interval por 0.4, faltando 10 por 0.2
 
 chance da de tras/ tras + frente * 100
 
-arrumar o backButttttton, podio com o valor total de coins, finalizar aposta buton, multiplicador de aposta
-
 fera dms botar um start game intro no começo, tipo, seria fera, e botar as fotos das umamusumes 
 
 firstPlace.textContent = musumeName;
