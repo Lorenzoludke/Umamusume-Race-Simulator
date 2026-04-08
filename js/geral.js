@@ -4,6 +4,7 @@
 
 let saldo = Number(localStorage.getItem("saldo")) || 100;
 let podio = JSON.parse(localStorage.getItem("podio")) || [null, null, null];
+let podioRace = JSON.parse(localStorage.getItem("podioRace")) || [null, null, null];
 let price = Number(localStorage.getItem("price")) || 0;
 let multiplier = Number(localStorage.getItem("multiplier")) || 1;
 
@@ -46,6 +47,24 @@ function escolherMusume(nome, posicao) {
 function limparPodio() {
     podio = [null, null, null];
     salvarPodio();
+}
+
+// =====================
+// PODIO RACE
+// =====================
+
+function salvarRace(nome, posicao) {
+    localStorage.setItem("podioRace", JSON.stringify(podioRace));
+}
+
+function pegarRace(nome, posicao) {
+    podioRace[posicao] = nome;
+    salvarRace();
+}
+
+function limparRace() {
+    podioRace = [null, null, null];
+    salvarRace();
 }
 
 // =====================

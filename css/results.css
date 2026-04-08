@@ -1,0 +1,17 @@
+.body {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-box {
+    background-color: rgb(120,120,120);
+    text-align: center;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+    transition: 0.2s;
+    cursor: pointer;
+}
