@@ -13,6 +13,6 @@ function saldoConfig() {
 
 // Função para redirecionar para a página de aposta ------------------
 
-function Apostar() {
+function apostar() {
     window.location.href = "/pages/aposta.html";
 }

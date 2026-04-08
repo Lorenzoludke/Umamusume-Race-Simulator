@@ -1,9 +1,10 @@
 .betTitle{
     background-color: rgb(120,120,120);
-    padding: 5px 15px;
+    text-align: center;
+    padding: 5px;
     border-radius: 20px;
     width: 200px;
-    margin: 20px auto;
+    margin: 0 auto;
     cursor: pointer;
     transition: 0.2s;
 }

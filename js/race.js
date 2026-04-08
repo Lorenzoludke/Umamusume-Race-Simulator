@@ -3,7 +3,7 @@
 // =======================
 
 const altura = 90;
-let tempoTotal = 30000;
+let tempoTotal = 3000;
 let inicio = Date.now();
 
 const saldoText = document.getElementById("saldo");
@@ -64,24 +64,20 @@ function calcularGanho(m, lider) {
 // DEFINIÇÃO DE LEADERBOARD
 // =======================
 
-// 1. cria valores únicos (1 a 12)
 let valores = [];
 for (let i = 1; i <= musumes.length; i++) {
     valores.push(i);
 }
 
-// 2. embaralha
 for (let i = valores.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [valores[i], valores[j]] = [valores[j], valores[i]];
 }
 
-// 3. aplica nas musumes
 musumes.forEach((m, i) => {
     m.progresso = valores[i];
 });
 
-// 4. ordena e aplica visual
 musumes.sort((a, b) => b.progresso - a.progresso);
 
 musumes.forEach((m, index) => {
@@ -112,14 +108,8 @@ function atualizarCorrida() {
     m.progresso += calcularGanho(m, lider);
     });
 
-    // =======================
-    // ORDENA NORMAL
-    // =======================
     musumes.sort((a, b) => b.progresso - a.progresso);
 
-    // =======================
-    // LIMITA ULTRAPASSAGEM (máx 1 posição)
-    // =======================
     let posAnterior = {};
     ordemAnterior.forEach((id, index) => {
         posAnterior[id] = index;
@@ -147,7 +137,6 @@ function atualizarCorrida() {
         el.querySelector(".posicao").textContent = (index + 1) + "º";
     });
 
-    // 👉 PARTE 3 (fica AQUI no final)
     ordemAnterior = musumes.map(m => m.id);
 
     // =======================
@@ -155,14 +144,45 @@ function atualizarCorrida() {
     // =======================
     if (tempoPassado >= tempoTotal) {
         clearInterval(loop);
-        alert("🏆 Vencedora: " + musumes[0].nome);
+        mostrarModal(musumes[0].nome, musumes[0].perfil);
 
-        window.location.href = "results.html";
+        pegarRace(musumes[0].nome, 0);
+        pegarRace(musumes[1].nome, 1);
+        pegarRace(musumes[2].nome, 2);
+
         setTimeout(() =>  {
             window.location.href = "results.html";
         }, 3000)
     }
 }
+
+// =======================
+// MODAL
+// =======================
+
+function mostrarModal(nome, imagem) {
+    const modal = document.getElementById("modal");
+    const texto = document.getElementById("winnerText");
+    const perfil = document.getElementById("modal-perfil");
+
+    perfil.src = imagem;
+    texto.textContent = "🏆 Vencedora: " + nome;
+    modal.classList.remove("hidden");
+}
+
+function fecharModal() {
+    document.getElementById("modal").classList.add("hidden");
+}
+
+function abrirModal() {
+    mostrarModal("Rice Shower", "/img/rice_shower.jpg");
+}
+
+document.getElementById("modal").addEventListener("click", (e) => {
+    if (e.target.id === "modal") {
+        fecharModal();
+    }
+});
 
 // =======================
 // LOOP

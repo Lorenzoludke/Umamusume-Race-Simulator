@@ -1,6 +1,6 @@
 body{
-    background-color: gray;
     text-align: center;
+    background-color: gray;
     color: black;
 }
 
@@ -64,7 +64,7 @@ body{
     scale: 1.02;
 }
 
-.ApostarButton{
+.apostarButton{
     background-color: rgb(86, 93, 95);
     color: white;
     font-size: 18px;
@@ -75,7 +75,7 @@ body{
     transition: 0.2s;
 }
 
-.ApostarButton:hover{
+.apostarButton:hover{
     background-color: rgb(150,150,150);
     transform: scale(1.02);
 }
