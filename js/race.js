@@ -3,7 +3,7 @@
 // =======================
 
 const altura = 90;
-let tempoTotal = 3000;
+let tempoTotal = 30000;
 let inicio = Date.now();
 
 const saldoText = document.getElementById("saldo");
