@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 musumes.forEach(musume => {
     musume.addEventListener("click", () => {
         const musumeName = musume.getAttribute("data-musume");
+        const musumePerfil = musume.querySelector(".avatar").src;
 
         if (getPodio().includes(musumeName)) {
             showToast("Essa musume já está no pódio");
@@ -51,7 +52,7 @@ musumes.forEach(musume => {
             return;
         }
 
-        escolherMusume(musumeName, posicao);
+        escolherMusume(musumeName, musumePerfil, posicao);
         addPrice(10);
 
         atualizarUI();

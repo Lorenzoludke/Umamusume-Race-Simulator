@@ -6,8 +6,7 @@ const altura = 90;
 let tempoTotal = 30000;
 let inicio = Date.now();
 
-const saldoText = document.getElementById("saldo");
-saldoText.textContent = saldo;
+carregaSaldo();
 
 // pega odds salvas
 let odds = JSON.parse(localStorage.getItem("odds")) || {};
@@ -146,13 +145,15 @@ function atualizarCorrida() {
         clearInterval(loop);
         mostrarModal(musumes[0].nome, musumes[0].perfil);
 
-        pegarRace(musumes[0].nome, 0);
-        pegarRace(musumes[1].nome, 1);
-        pegarRace(musumes[2].nome, 2);
+        pegarRace(musumes[0].nome, musumes[0].perfil, 0);
+        pegarRace(musumes[1].nome, musumes[1].perfil, 1);
+        pegarRace(musumes[2].nome, musumes[2].perfil, 2);
+
+        betCheck();
 
         setTimeout(() =>  {
             window.location.href = "results.html";
-        }, 3000)
+        }, 5000)
     }
 }
 
@@ -183,6 +184,36 @@ document.getElementById("modal").addEventListener("click", (e) => {
         fecharModal();
     }
 });
+
+// =======================
+// CHECA APOSTA
+// =======================
+
+function betCheck() {
+    let a = 0;
+    let acertos = 0;
+    let ganho = 2;
+    let valor;
+
+    while(podio[a] != null && a < 3) {
+        if(podio[a] === podioRace[a]) {
+            acertos += 1
+        }
+
+        a += 1;
+    }
+
+
+    ganho = price * multiplier / a * acertos * ganho;
+
+    valor = ganho - price * multiplier;
+    addGanhos(valor);
+
+    removeSaldo(price * multiplier);
+    addSaldo(ganho);
+
+    carregaSaldo();
+}
 
 // =======================
 // LOOP

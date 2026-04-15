@@ -9,9 +9,78 @@
 </head>
 <body>
 
-    <div class="title">
-        <h1 class="title-box">Resultado</h1>
-    </div>
+<div>
+    <button onclick="voltarAposta()" class="apostaButton">Voltar</button>
+</div>
+
+<div id="saldoButton">
+    <button class="saldo" onclick="saldoConfig()">Saldo: <span id="saldo"></span></button>
+</div>
+
+<div class="title">
+    <h1 class="title-box">Resultado</h1>
+</div>
     
+<div>
+    <img class="winnerAvatar" src="">
+    <h1 class="winnerTxt">🏆<span class="winner">Vencedora: </span></h1>
+</div>
+
+<div class="results-container">
+
+    <!-- CORRIDA -->
+    <div class="podio">
+        <h1>Corrida</h1>
+
+        <div class="lugar primeiro">
+            <span class="pos">1º</span>
+            <img class="avatar" src="">
+            <span class="nome"></span>
+        </div>
+
+        <div class="lugar segundo">
+            <span class="pos">2º</span>
+            <img class="avatar" src="">
+            <span class="nome"></span>
+        </div>
+
+        <div class="lugar terceiro">
+            <span class="pos">3º</span>
+            <img class="avatar" src="">
+            <span class="nome"></span>
+        </div>
+    </div>
+
+    <!-- APOSTA -->
+    <div class="podio">
+        <h1>Sua Aposta</h1>
+
+        <div class="lugar primeiro">
+            <span class="pos">1º</span>
+            <img class="avatar" src="">
+            <span class="nome"></span>
+        </div>
+
+        <div class="lugar segundo">
+            <span class="pos">2º</span>
+            <img class="avatar" src="">
+            <span class="nome"></span>
+        </div>
+
+        <div class="lugar terceiro">
+            <span class="pos">3º</span>
+            <img class="avatar" src="">
+            <span class="nome"></span>
+        </div>
+    </div>
+
+</div>
+
+<div>
+    <h1 class="ganhos">ganhos: </h1>
+</div>
 </body>
+
+    <script src="/js/geral.js"></script>
+    <script src="/js/results.js"></script>
 </html>
